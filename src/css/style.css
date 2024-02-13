@@ -1,0 +1,69 @@
+/* Estilos para todos os tamanhos de tela */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Define a altura da página para preencher toda a altura da tela */
+    margin: 0;
+    background-image: url('../imagens/Design\ sem\ nome.png'); /* Substitua 'caminho/para/sua/imagem.jpg' pelo caminho da sua imagem */
+    background-size: cover; /* Faz com que a imagem de fundo cubra toda a área disponível */
+    background-position: center; /* Centraliza a imagem de fundo */
+    
+}
+
+img{
+    opacity: 90%;
+}
+
+form {
+   
+    border-radius: 2%;
+    padding: 1px;
+    background-image: url('../imagens/Design\ sem\ nome.png');
+    height: 250px;
+    width: 420px; /* Define a largura do formulário */
+    max-width: 90%; /* Defina um valor máximo para garantir que o formulário não fique muito largo em telas grandes */
+}
+
+label {
+    
+    font-weight: bold;
+}
+
+input, button {
+    width: 100%; /* Ocupa a largura disponível */
+    box-sizing: border-box; /* Inclui padding e borda na largura */
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#result {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff; /* Define a cor do texto para garantir que seja visível na imagem de fundo */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adiciona sombra ao texto para melhor legibilidade */
+}
+
+label{
+   
+    margin-left: 8px;
+}
+
+h1{
+    border: 1px solid white;
+    border-radius: 30%;
+}
