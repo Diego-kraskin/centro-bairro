@@ -118,6 +118,21 @@ var bairrosValores = {
 
 var valorPartida = 0.0; // Valor do ponto de partida
 
+
+    var foundDestination = findBairro(destinationNormalized);
+    
+    if (foundPickup !== null && foundDestination !== null) {
+        var valorEntrega = calcularValorEntrega(bairrosValores[foundPickup], bairrosValores[foundDestination], valorPartida);
+        document.getElementById("result").innerText = "Valor aproximado de '" + foundPickup + "' para '" + foundDestination + "' é: R$" + valorEntrega;
+    } else {
+        document.getElementById("result").innerText = "Bairro de origem ou destino não encontrado.";
+    }
+}
+
+function normalizeString(str) {
+    return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+}
+
 function calculateDelivery() {
     var pickup = document.getElementById("pickup").value.toLowerCase(); // Convertendo para minúsculas
     var destination = document.getElementById("destination").value.toLowerCase(); // Convertendo para minúsculas
@@ -131,7 +146,7 @@ function calculateDelivery() {
     
     if (foundPickup !== null && foundDestination !== null) {
         var valorEntrega = calcularValorEntrega(bairrosValores[foundPickup], bairrosValores[foundDestination], valorPartida);
-        document.getElementById("result").innerText = "Valor aproximado de '" + foundPickup + "' para '" + foundDestination + "' é: R$" + valorEntrega;
+        document.getElementById("result").innerText = "O valor da entrega de '" + foundPickup + "' para '" + foundDestination + "' é: R$" + valorEntrega;
     } else {
         document.getElementById("result").innerText = "Bairro de origem ou destino não encontrado.";
     }
@@ -149,9 +164,4 @@ function findBairro(bairro) {
     }
     return null;
 }
-
-function calcularValorEntrega(valorPickup, valorDestination, valorPartida) {
-    // Calcular o valor da entrega com base nos valores dos bairros e do ponto de partida
-    return valorPickup + valorDestination + valorPartida;
-};
 
