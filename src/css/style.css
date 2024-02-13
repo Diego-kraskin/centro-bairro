@@ -7,10 +7,23 @@ body {
     justify-content: center;
     height: 100vh; /* Define a altura da página para preencher toda a altura da tela */
     margin: 0;
-    background-image: url('../imagens/Design\ sem\ nome.png'); /* Substitua 'caminho/para/sua/imagem.jpg' pelo caminho da sua imagem */
+    background-image: url('../imagens/mapa.jpg'); /* Substitua 'caminho/para/sua/imagem.jpg' pelo caminho da sua imagem */
     background-size: cover; /* Faz com que a imagem de fundo cubra toda a área disponível */
     background-position: center; /* Centraliza a imagem de fundo */
     
+}
+
+.logo {
+    color: white;
+    margin-top: 2px;
+    background-color: #007bff;
+    height: auto;
+    width: 100%; /* Para ocupar toda a largura do formulário */
+    max-width: 400px; /* Defina a largura máxima */
+    border-radius: 2%;
+    text-align: center;
+    font-family: fantasy;
+    font-size: 1.3rem;
 }
 
 img{
